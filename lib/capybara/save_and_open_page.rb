@@ -3,7 +3,7 @@ module Capybara
     extend(self)
 
     def save_and_open_page(html)
-      name="capybara-#{Time.new.strftime("%Y%m%d%H%M%S")}.html"
+      name="tmp/capybara-#{Time.new.strftime("%Y%m%d%H%M%S")}.html"
 
       FileUtils.touch(name) unless File.exist?(name)
 
